@@ -181,7 +181,7 @@ There **should no entry listed** that looks like:
 </ItemGroup>
 ```
 
-You are telling NuGet that you don't want to have Project A to be picked  up as NuGet-dependency. This is implicit, you don't have control about that. **The down-side is** the assmeblies of Project A, but not the assemblies of the packages of Project A, are not present in package of Project B.
+You are telling NuGet that you don't want to have Project A to be picked  up as NuGet-dependency. This is implicit, you don't have control about that. **The down-side is** the assemblies of Project A, but not the assemblies of the packages of Project A, are not present in package of Project B.
 
 By removing `PrivateAssets="all"` you disable the implicit behaviour of NuGet and the Project A will be picked up as NuGet dependency and EACH non-dependency package (also called transitive package).
 
